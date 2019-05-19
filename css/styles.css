@@ -32,9 +32,7 @@ section {
   background-image: url("https://booksy.com/media/gb/images/14927/biz_photo_152906017910.jpeg.750x500_q85_crop-resize.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* filter: grayscale(100%); */
   background-position: center;
-  /* background-attachment: fixed; */
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -43,7 +41,7 @@ section {
 .showcase button {
   height: 3rem;
   padding: 0 1rem;
-  border-radius: 1rem;
+  border-radius: .5rem;
   font-size: 1.2rem;
   border: none;
   cursor: pointer;
@@ -111,8 +109,7 @@ nav img {
   grid-area: 1/2/3/3;
   background-color: #111;
   border-radius: 1rem;
-  /* text-align: center; */
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .info h2 {
@@ -122,13 +119,20 @@ nav img {
 }
 
 .info span {
-  display:none;
+  display: none;
 }
 
 .info p {
   color: rgba(255, 255, 255, 0.75);
   width: 90%;
   margin: auto;
+  transition: 1s;
+}
+
+.fa-arrow-circle-down, .fa-arrow-circle-up {
+  cursor: pointer;
+  padding-top: 1rem;
+  font-size: 1.5rem;
 }
 
 .testimonial1 {
@@ -182,5 +186,4 @@ nav img {
   .info span {
     display: block;
   }
-
 }
