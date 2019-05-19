@@ -1,0 +1,164 @@
+/*GLOBAL STYLES*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.3;
+  background-color: #222;
+  font-family: Arial;
+  color: #fff;
+}
+
+section {
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/*HEADER*/
+.showcase {
+  height: 75vh;
+  background-image: url("https://booksy.com/media/gb/images/14927/biz_photo_152906017910.jpeg.750x500_q85_crop-resize.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: grayscale(100%); */
+  background-position: center;
+  /* background-attachment: fixed; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.showcase button {
+  height: 3rem;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20vh;
+  background-color: #2E86C1;
+  color: #fff;
+}
+
+nav {
+  height: 25vh;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav img {
+  height: 25vh;
+  width: 25vh;
+}
+
+/*ABOUT SECTION*/
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.testimonial {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 10px 200px rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+}
+
+.testimonial:hover {
+  box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.75);
+}
+
+.testimonial h3 {
+  color: #fff;
+  border-top: 1.5px solid white;
+  border-bottom: 1.5px solid white;
+  padding: 3rem 0;
+  font-weight: 300;
+  font-size: 2rem;
+  transition: .5s;
+  width: 80%;
+  text-align: center;
+}
+
+.testimonial:hover h3 {
+  font-size: 0px;
+  border: 0;
+}
+
+.info {
+  grid-area: 1/2/3/3;
+  background-color: #111;
+  border-radius: 1rem;
+  /* text-align: center; */
+  padding: 3rem 0;
+}
+
+.info h2 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.info p {
+  color: rgba(255, 255, 255, 0.75);
+  width: 90%;
+  margin: auto;
+}
+
+.testimonial1 {
+  grid-area: 1/1/2/2;
+  background-image: url("../img/testimonial-1.jpeg");
+}
+
+.testimonial2 {
+  grid-area: 2/1/3/2;
+  background-image: url("../img/testimonial-2.jpeg");
+}
+
+@media screen and (max-width:800px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:780px) {
+  .info {
+    grid-area: 2/1/3/3;
+  }
+
+  .testimonial2 {
+    grid-area: 1/2/2/3;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .about {
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial2 {
+    display: none;
+  }
+}
