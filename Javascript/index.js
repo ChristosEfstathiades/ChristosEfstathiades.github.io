@@ -22,8 +22,7 @@ function readMore() {
   })
 }
 
-if (window.innerWidth < 500) {
   readMore();
-} //else {
+ //else {
 //   $('*').removeAttr('style');
 // }
