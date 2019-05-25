@@ -47,3 +47,4 @@ function init() {
 }
 
 init();
+document.addEventListener("touchstart", function() {}, true);
