@@ -22,7 +22,28 @@ function readMore() {
   })
 }
 
+function sideMenu() {
+  $(".fa-bars").click(function() {
+    $("#side-menu").css("width", "250px");
+    $("#side-menu ul li, #side-menu ul li a").css("opacity", "1");
+  })
+
+  $(".close").click(function() {
+    $("#side-menu").css("width", "0px");
+    $("#side-menu ul li, #side-menu ul li a").css("opacity", "0");
+  })
+
+  $(document).click(function(event) {
+    if (!$(event.target).closest("#side-menu, .fa-bars").length) {
+      $("#side-menu").css("width", "0px");
+      $("#side-menu ul li, #side-menu ul li a").css("opacity", "0");
+    }
+  });
+}
+
+function init() {
   readMore();
- //else {
-//   $('*').removeAttr('style');
-// }
+  sideMenu();
+}
+
+init();

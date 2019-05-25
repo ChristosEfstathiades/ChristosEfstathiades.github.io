@@ -9,8 +9,6 @@
 
 -design a website for local business or redesign a website
   --prestige barbers
-    ---about
-    ---testimonials
     ---location
     ---work
     ---bookings -> times, prices
