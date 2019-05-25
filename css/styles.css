@@ -170,7 +170,7 @@ nav img {
   text-align: center;
 }
 
-.testimonial:hover h3 {
+.testimonial:hover h3, .testimonial:active h3 {
   font-size: 0px;
   border: 0;
 }
