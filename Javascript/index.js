@@ -10,14 +10,14 @@ function readMore() {
       $('.about').css("gridTemplateRows", "1fr")
       $(this).html('<i class="fas fa-arrow-circle-up"></i>');
       less = false;
-      $(".testimonial").hide();
+      $(".testimonial, .info h2").hide();
     } else {
       info.css('display', 'none');
       $(".info").css('gridArea', '3/1/4/2')
       $('.about').css("gridTemplateRows", "1fr 1fr 1fr")
       $(this).html('<i class="fas fa-arrow-circle-down"></i>');
       less = true;
-      $(".testimonial").show();
+      $(".testimonial, .info h2").show();
     }
   })
 }
@@ -47,4 +47,3 @@ function init() {
 }
 
 init();
-document.addEventListener("touchstart", function() {}, true);

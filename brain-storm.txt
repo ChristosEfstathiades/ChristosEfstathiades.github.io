@@ -11,11 +11,14 @@
   --prestige barbers
     ---location
     ---work
-    ---bookings -> times, prices
-    ---media
+    ---media -> instagram pics
+    ---footer
+      ----slogan
+      ----
     ---Goals and objectives
       ----A good looking website for portfolio
       ----Show off my skills
       ----Bonuses -> sell website to prestige
 
 // project ideas for $$$
+https://booksy.com/media/gb/images/14927/biz_photo_152906017910.jpeg.750x500_q85_crop-resize.jpg
