@@ -1,3 +1,21 @@
+function modals() {
+  $(document).on('click', '#signup', function(){
+    $(".signup-modal").css("display", "flex")
+    $(".signup-modal").fadeTo(500, 1);
+  })
+
+  $(".modal-close").click(function(){
+    $(".signup-modal").fadeTo(500, 0);
+    $(".signup-modal").fadeOut(10)
+  })
+
+  $(document).click(function(event) {
+    if (!$(event.target).closest(".signup-form, #signup").length) {
+      $(".signup-modal").hide()
+    }
+  });
+}
+
 function readMore() {
   less = true;
   var info = $(".info p")
@@ -41,9 +59,23 @@ function sideMenu() {
   });
 }
 
+// function galleryRotation() {
+//   setInterval(() => {
+//     var options = [
+//       "0",
+//       "6",
+//       "7"
+//     ]
+//     var randomImage = options[Math.floor(Math.random() * 4)]
+//     var image = "./img/img-" + randomImage + ".jpg"
+//     $(".img0").attr("src", image)
+//   }, 3000)
+// }
+
 function init() {
   readMore();
   sideMenu();
+  modals();
 }
 
 init();

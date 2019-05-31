@@ -10,11 +10,12 @@
 -design a website for local business or redesign a website
   --prestige barbers
     ---location
-    ---work
     ---media -> instagram pics
+    ---extra -> recommended hair products, sell merchandise, amazon affiliate links
     ---footer
       ----slogan
-      ----
+      ----address
+      ----media again
     ---Goals and objectives
       ----A good looking website for portfolio
       ----Show off my skills
