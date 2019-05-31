@@ -1,17 +1,18 @@
 function modals() {
   $(document).on('click', '#signup', function(){
     $(".signup-modal").css("display", "flex")
-    $(".signup-modal").fadeTo(500, 1);
+    $(".signup-modal").fadeTo(200, 1);
   })
 
   $(".modal-close").click(function(){
-    $(".signup-modal").fadeTo(500, 0);
-    $(".signup-modal").fadeOut(10)
+    $(".signup-modal").fadeTo(200, 0);
+    $(".signup-modal").fadeOut()
   })
 
   $(document).click(function(event) {
     if (!$(event.target).closest(".signup-form, #signup").length) {
-      $(".signup-modal").hide()
+      $(".signup-modal").fadeTo(200, 0);
+      $(".signup-modal").fadeOut()
     }
   });
 }
