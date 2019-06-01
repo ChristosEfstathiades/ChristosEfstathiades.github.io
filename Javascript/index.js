@@ -1,14 +1,30 @@
+
+//all functions
+function init() {
+  //controls info block functionality
+  readMore();
+  //controls side menu functionality
+  sideMenu();
+  //controls modal functionality
+  modals();
+}
+
+
 function modals() {
+
+  //set display to flex and fade in modal
   $(document).on('click', '#signup', function(){
     $(".signup-modal").css("display", "flex")
     $(".signup-modal").fadeTo(200, 1);
   })
 
+  //fade out modal and set display to none
   $(".modal-close").click(function(){
     $(".signup-modal").fadeTo(200, 0);
     $(".signup-modal").fadeOut()
   })
 
+  //close modal if outside area is clicked
   $(document).click(function(event) {
     if (!$(event.target).closest(".signup-form, #signup").length) {
       $(".signup-modal").fadeTo(200, 0);
@@ -16,6 +32,7 @@ function modals() {
     }
   });
 }
+
 
 function readMore() {
   less = true;
@@ -41,42 +58,28 @@ function readMore() {
   })
 }
 
+
 function sideMenu() {
+
+  //open side menu
   $(".fa-bars").click(function() {
     $("#side-menu").css("width", "250px");
     $("#side-menu ul li, #side-menu ul li a").css("opacity", "1");
   })
 
+  //close side menu
   $(".close").click(function() {
     $("#side-menu").css("width", "0px");
     $("#side-menu ul li, #side-menu ul li a").css("opacity", "0");
   })
 
+  //close side menu when outside area is clicked
   $(document).click(function(event) {
     if (!$(event.target).closest("#side-menu, .fa-bars").length) {
       $("#side-menu").css("width", "0px");
       $("#side-menu ul li, #side-menu ul li a").css("opacity", "0");
     }
   });
-}
-
-// function galleryRotation() {
-//   setInterval(() => {
-//     var options = [
-//       "0",
-//       "6",
-//       "7"
-//     ]
-//     var randomImage = options[Math.floor(Math.random() * 4)]
-//     var image = "./img/img-" + randomImage + ".jpg"
-//     $(".img0").attr("src", image)
-//   }, 3000)
-// }
-
-function init() {
-  readMore();
-  sideMenu();
-  modals();
 }
 
 init();
