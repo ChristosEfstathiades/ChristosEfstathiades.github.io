@@ -427,7 +427,7 @@ nav img {
   transition: filter .5s ease-in;
 }
 
-.img0:hover {
+.img0:hover, .img0:active {
   filter: grayscale(0);
 }
 
@@ -462,7 +462,7 @@ nav img {
   transform-origin: left;
 }
 
-.img0:hover a {
+.img0:hover a, .img0:active a {
   color: rgba(255, 255, 255, 0.9);
 }
 

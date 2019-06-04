@@ -1,8 +1,11 @@
+init();
 
 //all functions
 function init() {
   //mobile touch effects
-  touchscreen();
+  var x = window.matchMedia("(max-width: 900px)")
+  touchscreen(x)
+  x.addListener(touchscreen)
   //controls info block functionality
   readMore();
   //controls side menu functionality
@@ -36,23 +39,25 @@ function modals() {
 }
 
 
-function touchscreen() {
-  $(".testimonial").on("click", () => {
-    $(this).css({
-      "fontSize":"0px",
-      "border": "0"
-    })
-    $(this).css("boxShadow", "inset 0 0 0 0 rgba(0, 0, 0, 0.75)")
-});
-
-  $(".img0").on("click", () => {
-    $(".img0").css("filter", "grayscale(0)");
-    $(".img0::after").css({
-      "transform":"scaleX(1)",
-      "transformOrigin": "left"
+function touchscreen(x) {
+  if (x.matches) {
+    $(".testimonial").on("click", () => {
+      $(this).css({
+        "fontSize":"0px",
+        "border": "0"
+      });
+      $(this).css("boxShadow", "inset 0 0 0 0 rgba(0, 0, 0, 0.75)")
     });
-    $(".img0 a").css("color", "rgba(255, 255, 255, 0.9)");
-  });
+
+    $(".img0").on("click", () => {
+      $(this).css("filter", "grayscale(0)");
+      $(".img0::after").css({
+        "transform":"scaleX(1)",
+        "transformOrigin": "left"
+      });
+      $(this + " a").css("color", "rgba(255, 255, 255, 0.9)");
+    });
+  }
 }
 
 
@@ -103,5 +108,3 @@ function sideMenu() {
     }
   });
 }
-
-init();
