@@ -4,7 +4,10 @@ function init() {
   //typeWriter
   // typeWriter();
   //mobile touch effects
-  touchscreen()
+  var mq = window.matchMedia( "(pointer:coarse)" );
+  if (mq.matches) {
+    touchscreen()
+  }
   //controls info block functionality
   readMore();
   //controls side menu functionality
