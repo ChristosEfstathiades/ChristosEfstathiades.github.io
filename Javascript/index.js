@@ -37,7 +37,7 @@ function modals() {
 
 
 function touchscreen() {
-  $(".testimonial").on("touchstart", () => {
+  $(".testimonial").on("click", () => {
     $(this).css({
       "fontSize":"0px",
       "border": "0"
@@ -45,7 +45,7 @@ function touchscreen() {
   $(this).css("boxShadow", "inset 0 0 0 0 rgba(0, 0, 0, 0.75)")
 });
 
-  $(".img0").on("touchstart", () => {
+  $(".img0").on("click", () => {
     $(".img0").css("filter", "grayscale(0)");
     $(".img0::after").css({
       "transform":"scaleX(1)",
