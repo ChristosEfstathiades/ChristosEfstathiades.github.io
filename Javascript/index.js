@@ -1,11 +1,10 @@
-init();
 
 //all functions
 function init() {
+  //typeWriter
+  // typeWriter();
   //mobile touch effects
-  var x = window.matchMedia("(max-width: 900px)")
-  touchscreen(x)
-  x.addListener(touchscreen)
+  touchscreen()
   //controls info block functionality
   readMore();
   //controls side menu functionality
@@ -13,6 +12,19 @@ function init() {
   //controls modal functionality
   modals();
 }
+//
+// var i = 0;
+// var txt = 'BOOK PRESTIGE NOW';
+// var speed = 50;
+//
+// function typeWriter() {
+//   if (i < txt.length) {
+//
+//     $("#typing").innerHTML += txt.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, speed);
+  //}
+//}
 
 
 function modals() {
@@ -39,25 +51,23 @@ function modals() {
 }
 
 
-function touchscreen(x) {
-  if (x.matches) {
-    $(".testimonial").on("click", () => {
-      $(this).css({
-        "fontSize":"0px",
-        "border": "0"
-      });
-      $(this).css("boxShadow", "inset 0 0 0 0 rgba(0, 0, 0, 0.75)")
+function touchscreen() {
+  $(".testimonial").on("click", () => {
+    $(this).css({
+      "fontSize":"0px",
+      "border": "0"
     });
+    $(this).css("boxShadow", "inset 0 0 0 0 rgba(0, 0, 0, 0.75)")
+  });
 
-    $(".img0").on("click", () => {
-      $(this).css("filter", "grayscale(0)");
-      $(".img0::after").css({
-        "transform":"scaleX(1)",
-        "transformOrigin": "left"
-      });
-      $(this + " a").css("color", "rgba(255, 255, 255, 0.9)");
+  $(".img0").on("click", () => {
+    $(this).css("filter", "grayscale(0)");
+    $(".img0::after").css({
+      "transform":"scaleX(1)",
+      "transformOrigin": "left"
     });
-  }
+    $(this + " a").css("color", "rgba(255, 255, 255, 0.9)");
+  });
 }
 
 
@@ -108,3 +118,5 @@ function sideMenu() {
     }
   });
 }
+
+init();
