@@ -42,9 +42,17 @@ function touchscreen() {
       "fontSize":"0px",
       "border": "0"
     })
-
   $(this).css("boxShadow", "inset 0 0 0 0 rgba(0, 0, 0, 0.75)")
-  })
+});
+
+  $(".img0").on("touchstart", () => {
+    $(".img0").css("filter", "grayscale(0)");
+    $(".img0::after").css({
+      "transform":"scaleX(1)",
+      "transformOrigin": "left"
+    });
+    $(".img0 a").css("color", "rgba(255, 255, 255, 0.9)");
+  });
 }
 
 
