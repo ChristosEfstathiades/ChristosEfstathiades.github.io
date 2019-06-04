@@ -13,8 +13,6 @@
     ---media -> instagram pics
     ---extra -> recommended hair products, sell merchandise, amazon affiliate links
     ---footer
-      ----slogan
-      ----address
       ----media again
     ---Goals and objectives
       ----A good looking website for portfolio

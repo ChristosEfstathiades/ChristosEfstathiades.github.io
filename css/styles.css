@@ -33,12 +33,12 @@ section {
 
 .container {
   width: 80%;
-  margin: auto;
+  margin:0 auto;
 }
 
 .small-container {
   width: 90%;
-  margin: auto;
+  margin:0 auto;
 }
 
 /*MODALS
@@ -104,7 +104,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 60vh;
+  height: 75vh;
 }
 
 .signup-form form label {
@@ -132,9 +132,9 @@ section {
 
 .signup-form footer {
   height: 15vh;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .signup-form footer button {
@@ -260,6 +260,47 @@ nav ul li:hover, nav ul li a:hover {
 nav img {
   height: 25vh;
   width: 25vh;
+}
+
+/*FOOTER*/
+.footer {
+  height: 35vh;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.footer main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer main h2 {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-weight: 400;
+}
+
+.footer .location p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.875rem;
+  text-align:center;
+}
+
+.footer ul.extra {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 40%;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 /*ABOUT SECTION*/
@@ -450,6 +491,10 @@ nav img {
   .signup-form {
     width: 75%;
   }
+
+  .footer ul.extra {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width:780px) {
@@ -533,6 +578,10 @@ nav img {
   }
 
   .signup-form {
+    width: 90%;
+  }
+
+  .footer ul.extra {
     width: 90%;
   }
 }
