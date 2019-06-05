@@ -167,23 +167,28 @@ section {
 .showcase h2 {
   font-size: 1.2rem;
   background-color: rgba(17, 17, 17, 0.9);
-  padding: 2.4rem 1.2rem;
-  width: calc(2.4rem + 220px);
-  height: 6.3rem;
+  padding: 2rem 0;
+  width: 16rem;
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
   font-weight: 400;
-
+  border-right: 3px solid rgba(255, 255, 255, 0.9);
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   animation:
-    typing 3.5s steps(40, end)
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgba(255, 255, 255, 0.9); }
 }
 
 @keyframes typing {
   from { width: 0 }
-  to { width: calc(2.4rem + 220px) }
+  to { width: 16rem }
 }
 
 nav {
