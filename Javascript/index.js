@@ -1,8 +1,6 @@
 
 //all functions
 function init() {
-  //typeWriter
-  // typeWriter();
   //mobile touch effects
   var mq = window.matchMedia( "(pointer:coarse)" );
   if (mq.matches) {
@@ -15,19 +13,6 @@ function init() {
   //controls modal functionality
   modals();
 }
-//
-// var i = 0;
-// var txt = 'BOOK PRESTIGE NOW';
-// var speed = 50;
-//
-// function typeWriter() {
-//   if (i < txt.length) {
-//
-//     $("#typing").innerHTML += txt.charAt(i);
-//     i++;
-//     setTimeout(typeWriter, speed);
-  //}
-//}
 
 
 function modals() {
