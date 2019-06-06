@@ -23,17 +23,26 @@ function modals() {
     $(".signup-modal").fadeTo(200, 1);
   })
 
+  $(document).on('click', '#login', () => {
+    $(".login-modal").css("display", "flex")
+    $(".login-modal").fadeTo(200, 1);
+  })
+
   //fade out modal and set display to none
   $(".modal-close").click(() => {
     $(".signup-modal").fadeTo(200, 0);
     $(".signup-modal").fadeOut()
+    $(".login-modal").fadeTo(200, 0);
+    $(".login-modal").fadeOut()
   })
 
   //close modal if outside area is clicked
   $(document).click(function(event) {
-    if (!$(event.target).closest(".signup-form, #signup").length) {
+    if (!$(event.target).closest(".signup-form, #signup, #login").length) {
       $(".signup-modal").fadeTo(200, 0);
       $(".signup-modal").fadeOut()
+      $(".login-modal").fadeTo(200, 0);
+      $(".login-modal").fadeOut()
     }
   });
 }
