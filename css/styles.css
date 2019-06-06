@@ -157,7 +157,7 @@ section {
   background-image: url("../img/showcase.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: 50% 50%;
   display: flex;
   align-items: center;
   justify-content: center;
