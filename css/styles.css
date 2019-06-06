@@ -384,10 +384,11 @@ nav img {
   transition: 1s;
 }
 
-.fa-arrow-circle-down, .fa-arrow-circle-up {
+.fa-arrow-circle-down {
   cursor: pointer;
   padding-top: 1rem;
   font-size: 1.5rem;
+  transition: .5s;
 }
 
 .testimonial1 {

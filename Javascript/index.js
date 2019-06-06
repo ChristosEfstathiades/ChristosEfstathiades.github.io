@@ -78,14 +78,14 @@ function readMore() {
       });
       $(".info").css('gridArea', '1/1/1/1')
       $('.about').css("gridTemplateRows", "1fr")
-      $(this).html('<i class="fas fa-arrow-circle-up"></i>');
+      $('.fa-arrow-circle-down').css("transform", "rotate(180deg)");
       less = false;
       $(".testimonial, .info h2").hide();
     } else {
       info.css('display', 'none');
       $(".info").css('gridArea', '3/1/4/2')
       $('.about').css("gridTemplateRows", "1fr 1fr 1fr")
-      $(this).html('<i class="fas fa-arrow-circle-down"></i>');
+      $('.fa-arrow-circle-down').css("transform", "rotate(0deg)");
       less = true;
       $(".testimonial, .info h2").show();
     }
