@@ -602,9 +602,3 @@ nav img {
     width: 96%;
   }
 }
-
-@media screen and (pointer:coarse) {
-  .showcase {
-    background-image: url("../img/img-8.jpg");
-  }
-}
