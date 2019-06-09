@@ -554,7 +554,7 @@ nav img {
   text-align: center;
 }
 
-.location-item a {
+.location-item .book-link {
   all:unset;
   margin-top: 1rem;
   background-color: #111;
