@@ -33,12 +33,12 @@ section {
 
 .container {
   width: 80%;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .small-container {
   width: 90%;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 /*MODALS
@@ -148,6 +148,7 @@ section {
   background-color: rgba(17, 17, 17, 0.9);
   color: rgba(255, 255, 255, 0.9);
   font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
 }
 
 /*HEADER*/
@@ -172,22 +173,35 @@ section {
   text-align: center;
   font-weight: 400;
   border-right: 3px solid rgba(255, 255, 255, 0.9);
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
   animation:
     typing 3.5s steps(34, end),
     blink-caret .75s step-end infinite;
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgba(255, 255, 255, 0.9); }
+  from, to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: rgba(255, 255, 255, 0.9);
+  }
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 16rem }
+  from {
+    width: 0
+  }
+
+  to {
+    width: 16rem
+  }
 }
 
 nav {
@@ -306,7 +320,7 @@ nav img {
 .footer .location p {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1rem;
-  text-align:center;
+  text-align: center;
 }
 
 .footer ul.extra {
@@ -445,14 +459,14 @@ nav img {
   transition: filter .5s ease-in;
 }
 
-.img0:hover{
+.img0:hover {
   filter: grayscale(0);
 }
 
 .img0 a {
   color: transparent;
   transition: color .5s ease-in;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.3rem;
   text-decoration: none;
   text-transform: capitalize;
@@ -493,6 +507,64 @@ nav img {
 
 .socials a i:hover {
   color: rgba(255, 255, 255, 0.6);
+}
+
+/*BOOKING PAGE*/
+.locations {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-column-gap: 10%;
+  justify-content: space-between;
+}
+
+.location-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-item img {
+  width: 12.5rem;
+  height: 12.5rem;
+}
+
+.location-item h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 2px;
+  font-weight: 300;
+  padding-top: 1rem;
+}
+
+.location-item p {
+  color: rgba(255,255,255,0.75);
+  text-align:center;
+  padding-top: 1rem;
+}
+
+.location-item p:nth-child(even) {
+  font-weight: 400;
+}
+
+.location-item ul {
+  list-style-type: none;
+  color:rgba(255,255,255,.75);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.location-item a {
+  all:unset;
+  margin-top: 1rem;
+  background-color: #111;
+  padding: 1.5rem 1.5rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media screen and (max-width:1200px) {
@@ -542,7 +614,18 @@ nav img {
   }
 }
 
+@media screen and (max-width:680px) {
+  .locations {
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 0%;
+  }
+}
+
 @media screen and (max-width:500px) {
+  html {
+    font-size: 12px;
+  }
+
   .about {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr;
@@ -601,5 +684,15 @@ nav img {
 
   .footer ul.extra {
     width: 96%;
+  }
+
+  .location-item:first-child {
+    padding-bottom: 2rem;
+  }
+
+  .locations {
+    grid-template-columns: 100%;
+    height: 165vh;
+    align-content: space-around;
   }
 }

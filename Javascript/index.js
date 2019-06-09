@@ -1,8 +1,7 @@
-
 //all functions
 function init() {
   //mobile touch effects
-  var mq = window.matchMedia( "(pointer:coarse)" );
+  var mq = window.matchMedia("(pointer:coarse)");
   if (mq.matches) {
     touchscreen()
   }
@@ -51,7 +50,7 @@ function modals() {
 function touchscreen() {
   $(".testimonial").on("click", () => {
     $(this).css({
-      "fontSize":"0px",
+      "fontSize": "0px",
       "border": "0"
     });
     $(this).css("boxShadow", "inset 0 0 0 0 rgba(0, 0, 0, 0.75)")
@@ -60,7 +59,7 @@ function touchscreen() {
   $(".img0").on("click", () => {
     $(this).css("filter", "grayscale(0)");
     $(".img0::after").css({
-      "transform":"scaleX(1)",
+      "transform": "scaleX(1)",
       "transformOrigin": "left"
     });
     $(this + " a").css("color", "rgba(255, 255, 255, 0.9)");
