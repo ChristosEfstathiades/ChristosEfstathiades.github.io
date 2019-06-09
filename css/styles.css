@@ -543,7 +543,7 @@ nav img {
   padding-top: 1rem;
 }
 
-.location-item p:nth-child(even) {
+.location-item #tel {
   font-weight: 400;
 }
 
