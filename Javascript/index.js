@@ -79,14 +79,14 @@ function readMore() {
       $('.about').css("gridTemplateRows", "1fr")
       $('.fa-arrow-circle-down').css("transform", "rotate(180deg)");
       less = false;
-      $(".testimonial, .info h2").hide();
+      $(".testimonial").hide();
     } else {
       info.css('display', 'none');
       $(".info").css('gridArea', '3/1/4/2')
       $('.about').css("gridTemplateRows", "1fr 1fr 1fr")
       $('.fa-arrow-circle-down').css("transform", "rotate(0deg)");
       less = true;
-      $(".testimonial, .info h2").show();
+      $(".testimonial").show();
     }
   })
 }

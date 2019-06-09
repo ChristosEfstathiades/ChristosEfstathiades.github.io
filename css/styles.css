@@ -378,7 +378,7 @@ nav img {
   grid-area: 1/2/3/3;
   background-color: #111;
   border-radius: 1rem;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .info h2 {
@@ -400,7 +400,7 @@ nav img {
 
 .fa-arrow-circle-down {
   cursor: pointer;
-  padding-top: 1rem;
+  padding: 1rem 0;
   font-size: 1.5rem;
   transition: .5s;
 }
@@ -623,7 +623,7 @@ nav img {
 
 @media screen and (max-width:500px) {
   html {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .about {
