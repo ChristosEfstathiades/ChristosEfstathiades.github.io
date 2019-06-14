@@ -36,7 +36,7 @@ function modals() {
   })
 
   //close modal if outside area is clicked
-  $(document).click(function(event) {
+  $(document).on('click', function(event) {
     if (!$(event.target).closest(".signup-form, #signup, #login").length) {
       $(".signup-modal").fadeTo(200, 0);
       $(".signup-modal").fadeOut()
@@ -107,7 +107,7 @@ function sideMenu() {
   })
 
   //close side menu when outside area is clicked
-  $(document).click(function(event) {
+  $(document).on("click", function(event) {
     if (!$(event.target).closest("#side-menu, .fa-bars, .modal-close").length) {
       $("#side-menu").css("width", "0px");
       $("#side-menu ul li, #side-menu ul li a").css("opacity", "0");
