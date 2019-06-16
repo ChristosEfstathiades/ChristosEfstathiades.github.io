@@ -9,11 +9,9 @@
 
 -design a website for local business or redesign a website
   --prestige barbers
-    ---location
     ---extra -> recommended hair products, sell merchandise, amazon affiliate links
     ---Goals and objectives
       ----A good looking website for portfolio
       ----Show off my skills
       ----Bonuses -> sell website to prestige
-    ---Booking page
-      ----
+//

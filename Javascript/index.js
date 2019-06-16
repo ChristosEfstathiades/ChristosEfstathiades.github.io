@@ -1,5 +1,9 @@
 //all functions
 function init() {
+  //typeWriter
+  const txtElement = $(".showcase h1 a");
+  const words = txtElement.data('words');
+  new typeWriter(txtElement, words)
   //mobile touch effects
   var mq = window.matchMedia("(pointer:coarse)");
   if (mq.matches) {
@@ -115,4 +119,21 @@ function sideMenu() {
   });
 }
 
-init();
+const typeWriter = function(txtElement, words) {
+  this.txtElement = txtElement;
+  this.words = words;
+  this.txt = '';
+  this.type();
+}
+
+typeWriter.prototype.type = function() {
+  //add char
+  this.txt = this.words.substring(0, this.txt.length + 1)
+  this.txtElement.text(this.txt);
+  if (this.txt === this.words) {
+    clearTimeout()
+  }
+  setTimeout(() => this.type(), 102);
+}
+
+document.addEventListener('DOMContentLoaded', init);
