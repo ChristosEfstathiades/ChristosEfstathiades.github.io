@@ -600,10 +600,6 @@ nav img {
   .img1, .img2, .img3, .img4 {
     height: 100%;
   }
-
-  .showcase {
-    background-attachment: scroll;
-  }
 }
 
 @media screen and (max-width:680px) {
@@ -692,5 +688,11 @@ nav img {
 @media screen and (min-width:1400px) {
   html {
     font-size: 20px;
+  }
+}
+
+@media screen and (pointer:coarse) {
+  .showcase {
+    background-attachment: scroll;
   }
 }
