@@ -181,10 +181,14 @@ section {
   margin: 0 auto;
 }
 
+.showcase a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
 
 .showcase h1 a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
+  transition: .5s;
 }
 
 nav {
@@ -493,6 +497,40 @@ nav img {
 }
 
 /*BOOKING PAGE*/
+/*BOOKING PARAGRAPH*/
+.paragraph {
+  background: url(../img/text-background.jpg) rgba(0,0,0,0.75);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.paragraph-info {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.paragraph-info h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.paragraph-info p {
+  color: rgba(255,255,255,0.75);
+  line-height: 1.5;
+}
+
+/*BOOKING LOCATION PAGE*/
 .locations {
   display: grid;
   grid-template-columns: 45% 45%;
@@ -514,42 +552,42 @@ nav img {
 .location-item h1 {
   font-size: 2rem;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   letter-spacing: 2px;
   font-weight: 300;
   padding-top: 1rem;
 }
 
 .location-item p {
-  color: rgba(255,255,255,0.75);
-  text-align:center;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
   padding-top: 1rem;
 }
 
 .location-item #tel {
-  all:unset;
+  all: unset;
   font-weight: 400;
-  color: rgba(255,255,255,0.75);
-  text-align:center;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
   padding-top: 1rem;
 }
 
 .location-item ul {
   list-style-type: none;
-  color:rgba(255,255,255,.75);
+  color: rgba(255, 255, 255, .75);
   padding-top: 1rem;
   text-align: center;
 }
 
 .location-item .book-link {
-  all:unset;
+  all: unset;
   margin-top: 1rem;
   background-color: #111;
   padding: 1.5rem 1.5rem;
   font-weight: 400;
   font-size: 1.25rem;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   letter-spacing: 1px;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
@@ -692,7 +730,7 @@ nav img {
 }
 
 @media screen and (pointer:coarse) {
-  .showcase {
+  .showcase, .paragraph {
     background-attachment: scroll;
   }
 }

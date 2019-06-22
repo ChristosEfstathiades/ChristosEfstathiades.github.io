@@ -133,7 +133,7 @@ typeWriter.prototype.type = function() {
   if (this.txt === this.words) {
     clearTimeout()
   }
-  setTimeout(() => this.type(), 150);
+  setTimeout(() => this.type(), 120);
 }
 
 document.addEventListener('DOMContentLoaded', init);
