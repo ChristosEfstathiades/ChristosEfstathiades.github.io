@@ -12,3 +12,6 @@
     ---Goals and objectives
       ----A good looking website for portfolio
       ----Show off my skills
+
+quick notes
+match up all font sizes
