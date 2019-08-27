@@ -1,17 +1,1 @@
-// project ideas for portfolio
 
--A redesign of burger house
-  --Real PHP form
-  --Javascript functionality
-
--A redesign of a large scale website (target, ikea etc)
-  --Very large scale project
-
--design a website for local business or redesign a website
-  --prestige barbers
-    ---Goals and objectives
-      ----A good looking website for portfolio
-      ----Show off my skills
-
-quick notes
-match up all font sizes

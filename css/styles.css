@@ -31,6 +31,11 @@ section {
   padding: 2rem 0;
 }
 
+.error {
+  color: #CB4335;
+  font-weight: 600;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -41,10 +46,10 @@ section {
   margin: 0 auto;
 }
 
-/*MODALS
+/*MODALS*/
 
 /*signup modal*/
-.signup-modal, .login-modal {
+.signup-modal, .login-modal, .success-modal {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
@@ -136,7 +141,7 @@ section {
   align-items: center;
 }
 
-.signup-form footer button {
+.signup-form footer button, .message .continue {
   all: unset;
   text-align: center;
   font-weight: 400;
@@ -149,6 +154,34 @@ section {
   color: rgba(255, 255, 255, 0.9);
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 1px;
+}
+
+.success-modal .signup-form {
+  padding: 1rem 0;
+  width: 40%;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.message .success {
+  color: #28B463;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.message h4 {
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 500;
+  padding: .5rem  0;
+}
+
+.message .continue {
+  width: 60%;
 }
 
 /*HEADER*/
@@ -606,8 +639,8 @@ nav img {
     font-size: 14px;
   }
 
-  .signup-form {
-    width: 75%;
+  .signup-form, .success-modal .signup-form {
+    width: 70%;
   }
 
   .footer ul.extra {
@@ -706,7 +739,7 @@ nav img {
     flex-direction: column;
   }
 
-  .signup-form {
+  .signup-form, .success-modal .signup-form {
     width: 90%;
   }
 

@@ -3,7 +3,7 @@ function init() {
   //typeWriter
   const txtElement = $(".showcase h1 a");
   const words = txtElement.data('words');
-  new typeWriter(txtElement, words)
+  new typeWriter(txtElement, words);
   //mobile touch effects
   var mq = window.matchMedia("(pointer:coarse)");
   if (mq.matches) {
@@ -15,8 +15,60 @@ function init() {
   sideMenu();
   //controls modal functionality
   modals();
+  //form submissions
+  ajaxForms();
 }
 
+
+function ajaxForms() {
+  $(".signup-modal .signup-form .small-container form").submit(function(e) {
+    e.preventDefault();
+    let form = ".signup-modal .signup-form .small-container form";
+    let first = $(form + " input[name=first-name]").val();
+    let last = $(form + " input[name=last-name]").val();
+    let email = $(form + " input[name=email]").val();
+    let password = $(form + " input[name=password]").val();
+    $.post("classes/user.php", {
+      first: first,
+      last: last,
+      email: email,
+      pwd: password,
+      signup: true
+    }, function(data, status) {
+      if (data == "success") {
+        $(".signup-modal").fadeTo(200, 0);
+        $(".signup-modal").fadeOut()
+        $(".success-modal").css("display", "flex")
+        $(".success-modal").fadeTo(200, 1);
+      }
+      else {
+        $(form + " .error").html(data);
+      }
+    })
+  })
+
+  $(".login-modal .signup-form .small-container form").submit(function(e) {
+    e.preventDefault();
+    let form = ".login-modal .signup-form .small-container form";
+    let email = $(form + " input[name=email]").val();
+    let password = $(form + " input[name=password]").val();
+    $.post("classes/user.php", {
+      email: email,
+      pwd: password,
+      login: true
+    }, function(data, status) {
+      if (data == "success") {
+        $(".login-modal").fadeTo(200, 0);
+        $(".login-modal").fadeOut()
+        $(".success-modal").css("display", "flex")
+        $(".success-modal").fadeTo(200, 1);
+      }
+      else {
+        $(form + " .error").html(data);
+      }
+    })
+  })
+}
 
 function modals() {
 
@@ -31,12 +83,18 @@ function modals() {
     $(".login-modal").fadeTo(200, 1);
   })
 
+  $(".continue").click(() => {
+    document.location.reload();
+  })
+
   //fade out modal and set display to none
-  $(".modal-close").click(() => {
+  $(".modal-close, .continue").click(() => {
     $(".signup-modal").fadeTo(200, 0);
     $(".signup-modal").fadeOut()
     $(".login-modal").fadeTo(200, 0);
     $(".login-modal").fadeOut()
+    $(".success-modal").fadeTo(200, 0);
+    $(".success-modal").fadeOut()
   })
 
   //close modal if outside area is clicked
